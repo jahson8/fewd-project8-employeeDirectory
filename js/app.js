@@ -68,8 +68,8 @@ const generateModal = (index) =>{
 
     // Format birthdate
     let date = new Date(dob.date);
-    let birthday =  ('0' + date.getDate()).slice(-2) + '/'
-    + ('0' + (date.getMonth()+1)).slice(-2) + '/'
+    let birthday =  ('0' + date.getMonth()).slice(-2) + '/'
+    + ('0' + (date.getDay()+1)).slice(-2) + '/'
     + date.getYear();
     let html = `
             <div class="modal-wrap" data-index=${index}>
