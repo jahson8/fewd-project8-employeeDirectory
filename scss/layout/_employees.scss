@@ -14,7 +14,9 @@
 .employee{
     @include card;
     padding: 1.7em;
+    cursor: pointer;
     transition: transform .4s linear;
+
     &:hover {
         transform: translateY(-5px);
     }
