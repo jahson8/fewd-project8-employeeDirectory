@@ -1,0 +1,16 @@
+// mixins
+
+@mixin outline($color) {
+    outline: 3px solid $color;
+}
+
+@mixin card {
+    border-radius: $br;
+    background-color: $white;
+    box-shadow:   $box-shadow;      
+}
+
+@mixin block-centered {
+    margin-left: auto;
+    margin-right: auto;
+}

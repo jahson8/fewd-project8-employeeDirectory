@@ -1,0 +1,18 @@
+/* Hero styles
+ ========================================================================== */
+/**
+ * 
+ */
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.9)), url("../images/banner-img.jpg"), ;
+    height: 55vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

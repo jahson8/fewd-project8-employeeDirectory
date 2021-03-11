@@ -1,0 +1,17 @@
+/* image style
+ ========================================================================== */
+/**
+ * 
+ */
+
+//  responsive images
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-responsive {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}

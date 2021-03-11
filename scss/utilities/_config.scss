@@ -1,0 +1,44 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+
+
+// Font Stacks
+
+$font-url--google1:   "https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap";
+$font-url--google2:   "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap";
+
+$font-family--primary:   "Crimson Text", serif;
+$font-family--secondary: "Work Sans", sans-serif;
+
+// Font Weights
+
+$font-weight--normal: 400;
+$font-weight--bold: 700;
+
+// Descriptive Base Colors
+
+$white: #fff;
+$black: #0b0b0b;
+$gray:  #edeff0;
+$body-color: #4b5658;
+
+$charcoal-blue: #294651;
+$violet:  #342951;
+$liver: #513429;
+$army-green: #475129;
+
+// Color Usage
+
+$color-primary: $charcoal-blue;
+$color-secondary:   $violet;   
+
+// Line-height
+$line-height:   1.5;
+
+// Box-shadow
+$box-shadow:    0 2px 0 rgba(0, 0, 0, 6%);
+
+// Border-radius
+$br:     7px;

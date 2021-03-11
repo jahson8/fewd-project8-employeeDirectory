@@ -1,0 +1,14 @@
+// error message styles
+
+.error-msg {
+    @include card;
+    margin: 3em auto;
+    padding: .5em;
+    width: 50vw;
+    font-weight: $font-weight--bold;
+    text-align: center;
+
+    h2 {
+        margin-top: 0;
+    }
+}

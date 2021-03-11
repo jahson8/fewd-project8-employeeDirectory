@@ -1,0 +1,109 @@
+/* Modal Styles
+ ========================================================================== */
+/**
+ * 
+ */
+
+ /* The Modal overlay(background) */
+ .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.8); 
+    z-index: 10;
+ }
+
+
+  
+
+
+ /* Modal Content/Box */
+ .modal {
+    @include block-centered;
+    background-color: $white;
+    margin-top: 15%;
+    margin-bottom: auto;
+    width: 75vw;
+    position: relative;
+    text-align: center;
+    border-radius: $br;
+    border: 1px solid #778;
+
+    padding: 30px 20px;
+
+
+    img {
+        @include block-centered;
+        border-radius: $br;
+        margin-bottom: 1em;
+    }
+
+    .name p,
+    .address p {
+        margin-top: .5em;
+    }
+
+    .name {
+        padding-bottom: 1.3em;
+        border-bottom: 1px solid;
+    }
+
+    .address {
+        margin-top: 1.3em;
+    }
+
+
+    @media(min-width: 550px){
+        width: 50vw;
+    }
+
+    @media(min-width: 768px){
+        width: 35vw;
+    }
+
+    @media(min-width: 1024px){
+        width: 23.44em;
+    }
+ }
+
+ /* The Buttons */
+
+%btn{
+    position: absolute;
+    font-size: 30px;
+    font-weight: $font-weight--bold;
+    border: none;
+    color: $black;
+    background-color:transparent;
+    border-radius: $br;
+    cursor: pointer;
+}
+
+.left{
+    @extend %btn;
+    left: 0;
+    top: 50%;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.right{
+    @extend %btn;
+    right: 0;
+    top: 50%;
+    margin-right: 10px;
+    padding:5px;
+}
+
+.close {
+     @extend %btn;
+     top: .31em;
+    right: .94em;
+}
+
+.hidden {
+    display: none;
+}

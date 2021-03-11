@@ -1,0 +1,12 @@
+// Searb Bar styles
+
+
+.search {
+    display: block;
+    padding: 8px;
+    border: none;
+    border-radius: $br; 
+    &:focus {
+        @include outline($white);
+    }
+}

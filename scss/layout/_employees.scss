@@ -1,0 +1,49 @@
+/* Employees list styles
+ ========================================================================== */
+/**
+ * 
+ */
+
+.employees {
+    margin-top:  1em;;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 40px;
+}
+
+.employee{
+    @include card;
+    padding: 1.7em;
+    transition: transform .4s linear;
+    &:hover {
+        transform: translateY(-5px);
+    }
+    img{
+ 
+        @include block-centered;
+        margin-bottom: 1em;
+        border-radius: 50%;
+        
+        @media(min-width: 600px){
+            margin-left: -.2em;
+            margin-bottom: 0;
+            width: 22%;
+            float: left;
+            margin-right: 1em;
+        }
+    }
+
+   
+    @media(min-width:652px){
+        max-width: 25em;
+    }
+  
+
+
+    
+}
+
+.caption {
+    font-size: .81rem;
+    text-align: center;   
+}
