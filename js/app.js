@@ -72,18 +72,19 @@ const generateModal = (index) =>{
     + ('0' + (date.getMonth()+1)).slice(-2) + '/'
     + date.getYear();
     let html = `
+            <div class="modal-wrap" data-index=${index}>
                 <img class="img-responsive" src="${picture.large}" alt="${name.first} ${name.last}">
-            <div class="name">
-                <h3>${name.first} ${name.last}</h3>
-                <p>${email}</p>
-                <p>${city}</p>
-            </div>
-            <div class="address">
-                <P>${phone}</P>
-                <P>${street.number} ${street.name} ${state} ${postcode}</P>
-                <P>Birthday: ${birthday}</P>
-            </div>
-        </section>`;
+                <div class="name">
+                    <h3>${name.first} ${name.last}</h3>
+                    <p>${email}</p>
+                    <p>${city}</p>
+                </div>
+                <div class="address">
+                    <P>${phone}</P>
+                    <P>${street.number} ${street.name} ${state} ${postcode}</P>
+                    <P>Birthday: ${birthday}</P>
+                </div>
+            </div>`;
     overlay.classList.remove("hidden");
     modalContent.innerHTML = html;
 }
@@ -103,21 +104,61 @@ const generateErrorMsg = () => {
 
 }
 
+
+
 // ------------------------------------------
 //  Event Handlers
 // ------------------------------------------
 
-const handleModalClose = evt => {
-    const close = evt.target;
-    if(close.tagName === "BUTTON"){
-        if(close.classList.contains("close")){
-            overlay.classList.add("hidden");
+// const handleModalClose = evt => {
+//     const close = evt.target;
+//     if(close.tagName === "BUTTON"){
+//         if(close.classList.contains("close")){
+//             overlay.classList.add("hidden"); 
   
-        }
-    }
+//         }
+//     }
     
+// }
+
+
+//creates new model
+const modalChange = num =>{
+    let index = modalContent.querySelector(".modal-wrap").getAttribute("data-index");
+    index = parseInt(index);
+    if(index >= 0 || index <= employees.length){
+        index = index + num;
+        generateModal(index);
+    } else {
+        modalContent.removeChild(btn)
+    }
+
+} 
+
+
+// Handles the closing of the modal
+const handleModalClose= evt=>{
+    const btn = evt.target;
+    if(btn.tagName === "BUTTON"){
+        if(btn.classList.contains("close")){
+            overlay.classList.add("hidden");
+        } 
+    }
 }
 
+
+// Handles the changing of the modal content
+const handleModalChange = evt => {
+    let btn = evt.target;
+    if(btn.tagName === "BUTTON"){
+        if(btn.classList.contains("right")){
+            modalChange(1);
+        } else if(btn.classList.contains("left")){
+            modalChange(-1);
+        }
+    }
+
+}
 
 
 
@@ -136,6 +177,7 @@ directory.addEventListener('click', evt => {
 });
 
 modalContainer.addEventListener("click", handleModalClose);
+modalContainer.addEventListener("click", handleModalChange);
 
 
 
