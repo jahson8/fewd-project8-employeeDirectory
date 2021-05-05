@@ -482,7 +482,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-bottom: auto;
   width: 75vw;
   position: relative;
@@ -497,7 +497,7 @@ a {
     margin-bottom: 1em; }
   .modal .name p,
   .modal .address p {
-    margin-top: .5em; }
+    margin-top: 0.5em; }
   .modal .name {
     padding-bottom: 1.3em;
     border-bottom: 1px solid; }
@@ -537,8 +537,8 @@ a {
   padding: 5px; }
 
 .close {
-  top: .31em;
-  right: .94em; }
+  top: 0.31em;
+  right: 0.94em; }
 
 .hidden {
   display: none; }
